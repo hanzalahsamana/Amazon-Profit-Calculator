@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  border-color: #606c7b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #232f3f;
+}
+
+p,
+span,
+label {
+  color: #606c7b;
+}
+
+a {
+  color: #0073c7;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.toastifyCustomClass {
+  font-size: 12px;
+  width: auto !important;
+  max-width: 500px;
+  min-width: 220px;
+}
+
+.toastifyCustomClass>div {
+  max-width: 250px;
+  border-radius: 10px !important;
+  min-height: 48px !important;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.toastifyCustomClass .Toastify__close-button {
+  align-self: center !important;
+  align-items: end;
+  opacity: 1;
+}
+
+.toastifyCustomClass .Toastify__toast-icon {
+  width: 18px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.customScroll {
+  overflow: auto;
+}
+
+.customScroll::-webkit-scrollbar {
+  width: 2.5px;
+  height: 2.5px;
+}
+
+.customScroll::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 0px;
+}
+
+.customScroll::-webkit-scrollbar-thumb {
+  background-color: #b9b9b9;
+  border-radius: 10px;
+  border: 0px solid #f1f1f1;
+}
+
+.customScroll::-webkit-scrollbar-thumb:hover {
+  background-color: #a5a4a4;
+}

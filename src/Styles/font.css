@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+@font-face {
+  font-family: 'Ember';
+  src: url('../assets/fonts/EmberDisplay_Lt.ttf') format('truetype');
+  font-weight: 300;
+  /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ember';
+  src: url('../assets/fonts/EmberDisplay_Rg.ttf') format('truetype');
+  font-weight: 400;
+  /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ember';
+  src: url('../assets/fonts/EmberDisplay_Md.ttf') format('truetype');
+  font-weight: 500;
+  /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ember';
+  src: url('../assets/fonts/EmberDisplay_Bd.ttf') format('truetype');
+  font-weight: 700;
+  /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ember';
+  src: url('../assets/fonts/EmberDisplay_He.ttf') format('truetype');
+  font-weight: 900;
+  /* Heavy */
+  font-style: normal;
+}
+/* 
+@font-face {
+  font-family: 'DmMono';
+  src: url('../assets/fonts/DMMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DmMono';
+  src: url('../assets/fonts/DMMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DmMono';
+  src: url('../assets/fonts/DMMono-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DmMono';
+  src: url('../assets/fonts/DMMono-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DmMono';
+  src: url('../assets/fonts/DMMono-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DmMono';
+  src: url('../assets/fonts/DMMono-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+} */
+
+
+.fontEmber {
+  font-family: 'Ember', sans-serif;
+}
+
+.fontPoppin {
+  font-family: 'Poppins', sans-serif;
+}
+
+.fontDmmono {
+  font-family: 'DM Mono', sans-serif;
+}
