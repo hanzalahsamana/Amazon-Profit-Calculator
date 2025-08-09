@@ -22,7 +22,7 @@ const ResponceDisplay = () => {
     }
 
     return (
-        <div ref={responseRef} className='slide-in-left flex relative flex-col bg-white w-full md:w-max md:min-w-[350px] overflow-hidden border-[#C3C8D4] border-[0.5px] border-l-1 md:border-l-0 -z-1 rounded-[12px]  md:rounded-s-[0px]'>
+        <div ref={responseRef} className='slide-in-left flex relative flex-col bg-white w-full md:w-max md:min-w-[350px] overflow-hidden border-[#C3C8D4] border-[0.5px] border-l-1 md:border-l-0  rounded-[12px]  md:rounded-s-[0px]'>
             <StatusCard status={calculation?.marginStatus} />
             <div className='p-5  '>
                 <div className='flex justify-between py-1.5'>

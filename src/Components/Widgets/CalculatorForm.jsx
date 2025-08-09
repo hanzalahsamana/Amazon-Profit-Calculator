@@ -11,8 +11,8 @@ const initialState = {
     ASIN: '',
     buyCost: '',
     sellingPrice: '',
-    amazonFee: null,
-    referralFeePercent: null,
+    amazonFee: '',
+    referralFeePercent: '',
     type: "ASIN",
 }
 
@@ -35,9 +35,15 @@ const CalculatorForm = () => {
     }
 
     const handleCheckbox = () => {
-        setCalculationPayload((prev) => ({
+
+        setCalculationPayload(prev => ({
             ...prev,
             type: prev.type === "manual" ? "ASIN" : "manual",
+            ASIN: '',
+            buyCost: '',
+            sellingPrice: '',
+            amazonFee: '',
+            referralFeePercent: '',
         }));
         setErrors({});
     };
@@ -79,12 +85,19 @@ const CalculatorForm = () => {
                     type: "manual",
                     buyCost: calculationPayload.buyCost,
                     estimatedSellingPrice: calculationPayload.sellingPrice,
-                    amazonFee: calculationPayload.amazonFee,
-                    referralFeePercent: calculationPayload.referralFeePercent
+                    amazonFee: calculationPayload.amazonFee || null,
+                    referralFeePercent: calculationPayload.referralFeePercent || null,
                 };
             }
 
             const response = await calculateProfit(FinalPayload);
+            setCalculationPayload(prev => ({
+                ...prev,
+                buyCost: response?.buyCost,
+                sellingPrice: response?.estimatedSellingPrice,
+                amazonFee: response?.amazonFee,
+                referralFeePercent: response?.referralFeePercent,
+            }));
 
             const existingHistory = JSON.parse(localStorage.getItem("calculationHistory")) || [];
 
@@ -93,6 +106,8 @@ const CalculatorForm = () => {
                 updatedHistory.shift();
             }
             localStorage.setItem("calculationHistory", JSON.stringify(updatedHistory));
+
+            toast.success("Calculated Successfully!")
 
         } catch (error) {
             console.error(error)
@@ -109,7 +124,7 @@ const CalculatorForm = () => {
 
     return (
         <form
-            className={`bg-white transition-all border-[0.5px] border-[#C3C8D4] max-w-[800px]  w-full p-6 ${!calculation || Object.keys(calculation).length === 0 ? 'rounded-[12px]' : 'rounded-[12px] md:rounded-e-[0px]'}`}
+            className={`bg-white z-[1] transition-all border-[0.5px] border-[#C3C8D4] max-w-[800px]  w-full p-6 ${!calculation || Object.keys(calculation).length === 0 ? 'rounded-[12px]' : 'rounded-[12px] md:rounded-e-[0px]'}`}
             onSubmit={handleCalculate}
         >
             <div className='flex flex-col gap-4'>

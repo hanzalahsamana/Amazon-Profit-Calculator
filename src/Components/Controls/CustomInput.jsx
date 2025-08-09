@@ -50,6 +50,7 @@ const CustomInput = ({
                     onChange={onChange}
                     placeholder={placeholder}
                     disabled={disabled}
+                    step="any" 
                     className={clsx(
                         "flex-1 bg-transparent border-none outline-none px-3 py-2 w-full text-[16px] font-medium text-[#434c5b]",
                         "placeholder-gray-400"

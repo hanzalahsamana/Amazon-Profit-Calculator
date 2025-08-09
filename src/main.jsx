@@ -16,7 +16,7 @@ createRoot(document.getElementById('root')).render(
       <App />
       <ToastContainer
         position="top-right"
-        autoClose={1800}
+        autoClose={1500}
         className={'toastifyCustomClass'}
         closeButton={false}
         limit={5}
